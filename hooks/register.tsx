@@ -146,6 +146,7 @@ async function uninstall($: EngineInterface): Promise<string | null> {
 async function toggleView($: EngineInterface): Promise<string> {
   const value = settings.placement === 'status-line' ? 'above-prompt' : 'status-line'
   const { deny } = await $.config.set({ key: 'monitor.placement', value })
+  if (!deny) { settings = { ...settings, placement: value }; $.ui.status(undefined) } // the outgoing instance still refreshes once after this command; only it can clear its own entry
   return deny ? `Could not change the view: ${deny}` : `Now shown ${value === 'status-line' ? 'in the status line' : 'above the prompt'}.`
 }
 

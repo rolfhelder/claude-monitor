@@ -2,6 +2,11 @@
 
 All notable changes to this project are documented here. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses [Semantic Versioning](https://semver.org/): fixes are patches, new features are minors.
 
+## [1.0.1] - 2026-11-17
+
+### Fixed
+- `/monitor view` back to above the prompt no longer leaves a stale entry in the status line.
+
 ## [1.0.0] - 2026-11-17
 
 ### Added
