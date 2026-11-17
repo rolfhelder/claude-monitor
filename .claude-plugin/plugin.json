@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "macOS only. A lightweight RAM/CPU recorder (launchd) toggled with /monitor, with live RAM, cache, swap and CPU shown above the prompt or in the status line. Logs stay on the Mac.",
   "author": {
-    "name": "Rolf Helder"
+    "name": "rolfhelder"
   },
   "license": "MIT",
   "repository": "https://github.com/rolfhelder/claude-monitor",
