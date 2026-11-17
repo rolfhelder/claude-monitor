@@ -1,0 +1,14 @@
+{
+  "name": "claude-monitor",
+  "description": "A RAM/CPU monitor plugin for Claude Code on macOS.",
+  "owner": {
+    "name": "rolfhelder"
+  },
+  "plugins": [
+    {
+      "name": "monitor",
+      "source": "./",
+      "description": "macOS RAM/CPU recorder with a live status row and /monitor command."
+    }
+  ]
+}

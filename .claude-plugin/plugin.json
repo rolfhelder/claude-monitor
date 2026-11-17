@@ -1,0 +1,50 @@
+{
+  "name": "monitor",
+  "version": "1.0.0",
+  "description": "macOS only. A lightweight RAM/CPU recorder (launchd) toggled with /monitor, with live RAM, cache, swap and CPU shown above the prompt or in the status line. Logs stay on the Mac.",
+  "author": {
+    "name": "Rolf Helder"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/rolfhelder/claude-monitor",
+  "keywords": [
+    "macos",
+    "memory",
+    "cpu",
+    "monitor",
+    "launchd"
+  ],
+  "userConfig": {
+    "sampleSeconds": {
+      "type": "number",
+      "title": "Sample interval (seconds)",
+      "description": "How often the recorder samples and the display refreshes (2-300).",
+      "default": 5,
+      "min": 2,
+      "max": 300
+    },
+    "placement": {
+      "type": "string",
+      "title": "Where to show it",
+      "description": "above-prompt: a fixed row above the input. status-line: an entry in the status line.",
+      "options": [
+        "above-prompt",
+        "status-line"
+      ],
+      "default": "above-prompt"
+    },
+    "detailedLogs": {
+      "type": "boolean",
+      "title": "Detailed logs",
+      "description": "Also log full executable paths of top processes and, when cmux is installed, their cmux workspace name (found by reading process environments with ps -axeww; only the name is stored). Off: only system numbers, app totals and process names.",
+      "default": false
+    },
+    "hungApps": {
+      "type": "boolean",
+      "title": "Check for hung apps under memory pressure",
+      "description": "When memory pressure is not normal, ask System Events (at most once a minute) which apps do not respond. Needs Automation permission.",
+      "default": false
+    }
+  },
+  "types": "./types/index.d.ts"
+}

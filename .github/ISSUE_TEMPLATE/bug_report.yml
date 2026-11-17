@@ -1,0 +1,107 @@
+name: Bug report
+description: Report something that is broken or behaving unexpectedly
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Issues are public: do not paste session content, tokens or credentials.
+        Security problems go to the [security policy](https://github.com/rolfhelder/claude-monitor/security/policy) instead.
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of the bug.
+    validations:
+      required: true
+  - type: dropdown
+    id: command
+    attributes:
+      label: Command
+      description: Which command or part of the plugin is affected?
+      options:
+        - "/monitor on"
+        - "/monitor off"
+        - "/monitor view"
+        - "/monitor report"
+        - "Background sampler (launchd)"
+        - "Other"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Start from a fresh session. Include the exact command you ran.
+      placeholder: |
+        1. ...
+        2. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What happened instead. Paste any error output.
+    validations:
+      required: true
+  - type: input
+    id: claude-version
+    attributes:
+      label: Claude Code version
+      description: Output of `claude --version`
+    validations:
+      required: true
+  - type: input
+    id: plugin-version
+    attributes:
+      label: Plugin version
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: macOS version and chip
+      placeholder: "macOS 15.5, Apple M2"
+    validations:
+      required: true
+  - type: input
+    id: install
+    attributes:
+      label: Install method
+      description: Marketplace name, or local path install
+    validations:
+      required: true
+  - type: textarea
+    id: settings
+    attributes:
+      label: Plugin settings
+      description: Your userConfig values (`sampleSeconds`, `placement`, `detailedLogs`, `hungApps`).
+      placeholder: |
+        sampleSeconds: 30
+        placement: ...
+        detailedLogs: false
+        hungApps: ...
+      render: yaml
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: "Copy the last lines of `~/Library/Logs/claude-monitor/sampler.err`, plus one redacted sample line (replace process names, paths and user names with `<redacted>`). Redact anything private."
+      placeholder: "tail -n 20 ~/Library/Logs/claude-monitor/sampler.err"
+      render: text
+  - type: checkboxes
+    id: redacted
+    attributes:
+      label: Privacy
+      options:
+        - label: I removed session content, tokens and private paths from this report
+          required: true
