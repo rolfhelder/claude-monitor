@@ -7,7 +7,7 @@
 
 Records RAM and CPU usage on your Mac and shows a live summary inside Claude Code, with local logs to look back at after a memory spike.
 
-![monitor above the prompt](assets/above-prompt.png)
+![monitor above the prompt](assets/monitor-above-prompt.png)
 
 **macOS only.** On other systems `/monitor` says so and does nothing.
 
@@ -73,7 +73,7 @@ Set these in `/plugin configure monitor@rolfhelder` (or `@claude-monitor`) or in
 
 Changing a setting rewrites and reloads the agent once; sessions don't touch launchd otherwise.
 
-![monitor in the status line](assets/status-line.png)
+![monitor in the status line](assets/monitor-status-line.png)
 
 ## Privacy: what is logged, and where
 
