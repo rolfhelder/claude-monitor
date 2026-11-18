@@ -13,9 +13,9 @@ Records RAM and CPU usage on your Mac and shows a live summary inside Claude Cod
 
 ## Video tutorial
 
-[![monitor tutorial: live RAM and CPU, view, and report](assets/monitor-tutorial.png)](assets/monitor-tutorial.mp4)
+<video src="assets/monitor-tutorial.mp4" poster="assets/monitor-tutorial.png" controls width="100%"></video>
 
-57 seconds: the live line as RAM and CPU climb, `view` to move it into the status line and back, and `report 30m`. Click the image to open the video.
+57 seconds: the live line as RAM and CPU climb, `view` to move it into the status line and back, and `report 30m`. [Download the video](assets/monitor-tutorial.mp4) if it doesn't play inline.
 
 ## Install
 
